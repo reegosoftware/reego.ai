@@ -10,8 +10,13 @@
       {%- if p.registry %}<span class="pill pill--ghost">{% include icon.html name="package" %}{{ p.registry }}</span>{% endif %}
       {%- if p.client %}<span class="project__client">for {{ p.client }}</span>{% endif %}
     </div>
-    <h3 class="project__title">{{ p.name }}</h3>
-    <p class="project__tagline">{{ p.tagline }}</p>
+    <div class="project__head">
+      {%- if p.logo %}<img class="project__logo" src="{{ p.logo | relative_url }}" alt="" width="44" height="44" loading="lazy">{% endif %}
+      <div>
+        <h3 class="project__title">{{ p.name }}</h3>
+        <p class="project__tagline">{{ p.tagline }}</p>
+      </div>
+    </div>
     {%- if p.metric %}<p class="project__metric">{% include icon.html name="sparkle" %}{{ p.metric }}</p>{% endif %}
     {%- if p.description %}<p class="project__desc">{{ p.description }}</p>{% endif %}
     {%- if p.install %}

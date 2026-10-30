@@ -10,7 +10,8 @@
 #   tags         list of short tags, used by the filter on /work/
 #   registry     pypi | npm (shows a registry badge)
 #   install      shell command with a copy button
-#   image        path to a screenshot, e.g. /assets/img/work/foo.jpg
+#   logo         square logo, e.g. /assets/img/work/logos/foo.svg
+#   image        screenshot (16:9), e.g. /assets/img/work/shots/foo.svg
 #   metric       highlighted result, e.g. "$80K/yr saved"
 #   featured     true → also shown on the home page
 #   links        list of { label, url }
@@ -19,6 +20,8 @@
 # ---------------------------------------------------------------------------
 
 - name: ToolCalling.ai
+  logo: /assets/img/work/logos/toolcalling.svg
+  image: /assets/img/work/shots/toolcalling.svg
   kind: product
   featured: true
   tagline: The function-calling playground for LLMs
@@ -31,6 +34,8 @@
     - { label: toolcalling.ai, url: "https://toolcalling.ai" }
 
 - name: FastData
+  logo: /assets/img/work/logos/fastdata.svg
+  image: /assets/img/work/shots/fastdata.svg
   kind: open-source
   featured: true
   registry: npm
@@ -48,6 +53,8 @@
     - { label: GitHub, url: "https://github.com/yilmazhasan/fastdata" }
 
 - name: DevGuard Scanner
+  logo: /assets/img/work/logos/devguard.svg
+  image: /assets/img/work/shots/devguard.svg
   kind: open-source
   featured: true
   registry: pypi
@@ -64,6 +71,8 @@
     - { label: GitHub, url: "https://github.com/yilmazhasan/devguard-scanner" }
 
 - name: ToolAugmented.ai
+  logo: /assets/img/work/logos/toolaugmented.svg
+  image: /assets/img/work/shots/toolaugmented.svg
   kind: product
   featured: true
   tagline: The field guide to tool-augmented LLMs
@@ -76,6 +85,8 @@
     - { label: toolaugmented.ai, url: "https://toolaugmented.ai" }
 
 - name: AI Slack agents
+  logo: /assets/img/work/logos/slack-agents.svg
+  image: /assets/img/work/shots/slack-agents.svg
   kind: client
   featured: true
   client: Aircall
@@ -88,9 +99,10 @@
   tags: [Agents, Automation, Slack, Data]
 
 - name: Global sales & customer insights
+  logo: /assets/img/work/logos/customer-insights.svg
+  image: /assets/img/work/shots/customer-insights.svg
   kind: client
   client: Aircall
-  image: /assets/img/work/global-sales-and-customer-insights.jpg
   tagline: Self-service sales and customer analytics
   description: >-
     A data product giving revenue and customer teams a single view of global
@@ -98,9 +110,10 @@
   tags: [Data, Analytics, Web]
 
 - name: Monitor Pro subscriptions
+  logo: /assets/img/work/logos/monitor-pro.svg
+  image: /assets/img/work/shots/monitor-pro.svg
   kind: client
   client: Aircall
-  image: /assets/img/work/monitor-pro-subscription.jpg
   tagline: Subscription monitoring & BI cost reduction
   description: >-
     Subscription and usage monitoring that helped the data team reduce
@@ -108,6 +121,8 @@
   tags: [Data, Analytics, Web]
 
 - name: prollm
+  logo: /assets/img/work/logos/prollm.svg
+  image: /assets/img/work/shots/prollm.svg
   kind: open-source
   featured: true
   registry: npm
@@ -121,6 +136,8 @@
     - { label: npm, url: "https://www.npmjs.com/package/prollm" }
 
 - name: prompt_llm
+  logo: /assets/img/work/logos/prompt-llm.svg
+  image: /assets/img/work/shots/prompt-llm.svg
   kind: open-source
   registry: pypi
   install: pip install prompt-llm
@@ -134,6 +151,8 @@
     - { label: GitHub, url: "https://github.com/reegosoftware/prompt_llm" }
 
 - name: JSON Schema generator
+  logo: /assets/img/work/logos/json-schema-generator.svg
+  image: /assets/img/work/shots/json-schema-generator.svg
   kind: tool
   tagline: Generate function-calling schemas in seconds
   description: >-
@@ -144,6 +163,8 @@
     - { label: Open app, url: "https://rs-cx.github.io/json-schema-generator-app" }
 
 - name: JSON Schema validator
+  logo: /assets/img/work/logos/json-schema-validator.svg
+  image: /assets/img/work/shots/json-schema-validator.svg
   kind: tool
   tagline: Validate tool-call arguments against their schema
   description: >-
@@ -154,6 +175,8 @@
     - { label: Open app, url: "https://rs-cx.github.io/json-schema-validator-app" }
 
 - name: custom-permutation & custom-combination
+  logo: /assets/img/work/logos/custom-permutation.svg
+  image: /assets/img/work/shots/custom-permutation.svg
   kind: open-source
   registry: npm
   install: npm i custom-permutation
