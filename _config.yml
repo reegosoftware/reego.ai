@@ -7,7 +7,7 @@ tagline: AI engineering studio
 description: >-
   Reego builds AI agents, automations, ML systems and MVPs — and helps teams
   with AI engineering, context engineering and agent development consulting.
-url: "https://reego.ai"
+url: "https://www.reego.ai"
 baseurl: ""
 lang: en_US
 timezone: Europe/Istanbul
@@ -19,7 +19,7 @@ twitter:
 social:
   name: Reego
   links:
-    - https://github.com/reego-software
+    - https://github.com/reegosoftware
     - https://www.linkedin.com/company/reego-software
     - https://x.com/ReegoSoftware
 

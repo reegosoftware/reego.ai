@@ -131,7 +131,7 @@
   tags: [LLM, CLI, Python]
   links:
     - { label: PyPI,   url: "https://pypi.org/project/prompt-llm/" }
-    - { label: GitHub, url: "https://github.com/reego-software/prompt_llm" }
+    - { label: GitHub, url: "https://github.com/reegosoftware/prompt_llm" }
 
 - name: JSON Schema generator
   kind: tool

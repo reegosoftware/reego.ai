@@ -15,7 +15,7 @@ contact:
   response_time: We usually reply within one business day.
 
 social:
-  - { name: GitHub,   icon: github,   url: "https://github.com/reego-software" }
+  - { name: GitHub,   icon: github,   url: "https://github.com/reegosoftware" }
   - { name: LinkedIn, icon: linkedin, url: "https://www.linkedin.com/company/reego-software" }
   - { name: X,        icon: x,        url: "https://x.com/ReegoSoftware" }
 
