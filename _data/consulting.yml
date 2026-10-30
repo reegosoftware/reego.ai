@@ -1,0 +1,52 @@
+# ---------------------------------------------------------------------------
+# Consulting section on the home page.
+# ---------------------------------------------------------------------------
+title: Consulting for teams building with AI
+intro: >-
+  Not sure where to start, or stuck between a promising demo and a reliable
+  product? We help founders and engineering teams make the right calls —
+  and then help build them.
+
+topics:
+  - title: AI Engineering
+    icon: layers
+    text: >-
+      Architecture reviews, model & provider selection, build-vs-buy, cost
+      and latency budgets, and production readiness for LLM systems.
+  - title: Context Engineering
+    icon: context
+    text: >-
+      Design what the model actually sees: retrieval, memory, tool schemas,
+      system prompts and context-window budgets that make agents reliable.
+  - title: Agent Development
+    icon: agent
+    text: >-
+      Agent architecture, tool design, MCP, evaluation strategy and
+      failure-mode analysis — before you burn months on the wrong loop.
+  - title: MVP & Product Ideas
+    icon: lightbulb
+    text: >-
+      Pressure-test AI product ideas, find the smallest thing worth building
+      and get a concrete technical roadmap with estimates.
+  - title: AI Strategy & Use Cases
+    icon: compass
+    text: >-
+      Find the high-ROI automation opportunities in your business and
+      prioritise them by value, risk and effort.
+  - title: Team Enablement
+    icon: users
+    text: >-
+      Hands-on workshops on LLM APIs, tool calling, RAG, evals and agentic
+      coding workflows for your engineers.
+
+formats:
+  - name: Advisory call
+    duration: 60–90 min
+    text: Bring your hardest question. Leave with a concrete recommendation and next steps.
+  - name: Discovery sprint
+    duration: 1–2 weeks
+    highlight: true
+    text: Audit, working prototype and a written roadmap with estimates you can act on.
+  - name: Fractional AI lead
+    duration: Monthly
+    text: Ongoing architecture, code review and hands-on building as part of your team.

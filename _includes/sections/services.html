@@ -1,0 +1,17 @@
+<section class="section" id="services">
+  <div class="container">
+    {% include section-head.html eyebrow="What we build" title="From a single automation to a full AI product." intro="We design, build and run the whole thing — or plug into your team for the hard parts." %}
+    <div class="services">
+      {%- for s in site.data.services %}
+      <article class="card service{% if s.featured %} service--featured{% endif %}" data-reveal>
+        <div class="service__icon">{% include icon.html name=s.icon %}</div>
+        <h3 class="service__title">{{ s.title }}</h3>
+        <p class="service__summary">{{ s.summary }}</p>
+        <ul class="checklist">
+          {%- for pt in s.points %}<li>{{ pt }}</li>{% endfor %}
+        </ul>
+      </article>
+      {%- endfor %}
+    </div>
+  </div>
+</section>

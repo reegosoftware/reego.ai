@@ -1,0 +1,65 @@
+# ---------------------------------------------------------------------------
+# Site-wide settings. Almost all page content lives in _data/*.yml —
+# edit those files to change copy, services, projects, FAQ, etc.
+# ---------------------------------------------------------------------------
+title: Reego
+tagline: AI engineering studio
+description: >-
+  Reego builds AI agents, automations, ML systems and MVPs — and helps teams
+  with AI engineering, context engineering and agent development consulting.
+url: "https://reego.ai"
+baseurl: ""
+lang: en_US
+timezone: Europe/Istanbul
+
+logo: /assets/img/logo-mark.svg
+twitter:
+  username: ReegoSoftware
+  card: summary_large_image
+social:
+  name: Reego
+  links:
+    - https://github.com/reego-software
+    - https://www.linkedin.com/company/reego-software
+    - https://x.com/ReegoSoftware
+
+permalink: /blog/:year/:title/
+
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  hard_wrap: false
+  syntax_highlighter: rouge
+
+sass:
+  style: compressed
+  sourcemap: never
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+feed:
+  path: blog/feed.xml
+
+defaults:
+  - scope: { path: "", type: posts }
+    values:
+      layout: post
+      author: hasan
+  - scope: { path: "" }
+    values:
+      layout: page
+      image: /assets/img/og.png
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vercel.json
+  - node_modules
+  - vendor
+  - .github
+  - .vercel

@@ -1,0 +1,32 @@
+---
+title: Work & products
+eyebrow: Work
+heading: Products, open source & client work.
+description: >-
+  AI products we run, open-source packages we maintain and systems we've built
+  for clients — all edited from a single YAML file.
+---
+{%- assign tags = "" | split: "" -%}
+{%- for p in site.data.projects -%}{%- assign tags = tags | concat: p.tags -%}{%- endfor -%}
+{%- assign tags = tags | uniq | sort_natural -%}
+<section class="section section--flush-top">
+  <div class="container">
+    <div class="filters" role="toolbar" aria-label="Filter projects" data-filter-group>
+      <button class="chip is-active" type="button" data-filter="all">All</button>
+      {%- for k in site.data.kinds %}
+      <button class="chip" type="button" data-filter="{{ k[0] }}">{{ k[1].label }}</button>
+      {%- endfor %}
+      <span class="filters__sep" aria-hidden="true"></span>
+      {%- for t in tags %}
+      <button class="chip chip--quiet" type="button" data-filter="{{ t | downcase }}">{{ t }}</button>
+      {%- endfor %}
+    </div>
+    <div class="projects projects--all">
+      {%- for p in site.data.projects %}
+      {% include project-card.html project=p %}
+      {%- endfor %}
+    </div>
+    <p class="empty" data-filter-empty hidden>Nothing here yet — try another filter.</p>
+  </div>
+</section>
+{% include sections/contact.html %}

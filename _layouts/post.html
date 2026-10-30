@@ -1,0 +1,51 @@
+---
+layout: default
+---
+{%- if page.external_url %}
+<meta http-equiv="refresh" content="0; url={{ page.external_url }}">
+{%- endif %}
+{%- assign author = site.data.authors[page.author] | default: site.data.authors.team -%}
+{%- assign words = content | number_of_words -%}
+{%- assign mins = words | divided_by: 220 | plus: 1 -%}
+<article class="post">
+  <header class="post__header">
+    <div class="hero__bg" aria-hidden="true"><div class="hero__grid"></div><div class="hero__glow hero__glow--a"></div></div>
+    <div class="container container--narrow">
+      <a class="post__back" href="{{ '/blog/' | relative_url }}">{% include icon.html name="arrow-left" %} All posts</a>
+      {%- if page.tags.size > 0 %}
+      <ul class="tags">{% for t in page.tags %}<li>{{ t }}</li>{% endfor %}</ul>
+      {%- endif %}
+      <h1 class="post__title">{{ page.title }}</h1>
+      {%- if page.description %}<p class="post__lead">{{ page.description }}</p>{% endif %}
+      <div class="post__byline">
+        <span class="avatar" aria-hidden="true">{{ author.initials }}</span>
+        <span>
+          <strong>{% if author.url %}<a href="{{ author.url }}" target="_blank" rel="noopener">{{ author.name }}</a>{% else %}{{ author.name }}{% endif %}</strong><br>
+          <span class="muted"><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time> · {{ mins }} min read</span>
+        </span>
+      </div>
+    </div>
+  </header>
+
+  <div class="container container--narrow">
+    {%- if page.external_url %}
+    <p class="callout">This post lives on <a href="{{ page.external_url }}">{{ page.source | default: page.external_url }}</a>. Redirecting…</p>
+    {%- endif %}
+    <div class="prose">
+      {{ content }}
+    </div>
+
+    <aside class="post-cta card">
+      <div>
+        <h2>Building something similar?</h2>
+        <p>We help teams design, build and ship AI agents and automations. Tell us what you're working on.</p>
+      </div>
+      <a class="btn btn--primary" href="{{ '/#contact' | relative_url }}">Talk to us {% include icon.html name="arrow-right" %}</a>
+    </aside>
+
+    <nav class="post-nav" aria-label="More posts">
+      {%- if page.previous %}<a href="{{ page.previous.url | relative_url }}"><span class="muted">← Older</span>{{ page.previous.title }}</a>{% else %}<span></span>{% endif %}
+      {%- if page.next %}<a class="post-nav__next" href="{{ page.next.url | relative_url }}"><span class="muted">Newer →</span>{{ page.next.title }}</a>{% endif %}
+    </nav>
+  </div>
+</article>

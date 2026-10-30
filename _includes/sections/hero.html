@@ -1,0 +1,51 @@
+{%- assign h = site.data.company.hero -%}
+<section class="hero">
+  <div class="hero__bg" aria-hidden="true"><div class="hero__grid"></div><div class="hero__glow hero__glow--a"></div><div class="hero__glow hero__glow--b"></div><div class="hero__glow hero__glow--c"></div></div>
+  <div class="container hero__inner">
+    <div class="hero__copy">
+      <p class="eyebrow eyebrow--chip"><span class="dot"></span>{{ h.eyebrow }}</p>
+      <h1 class="hero__title">{{ h.title_before }} <span class="gradient-text">{{ h.title_highlight }}</span></h1>
+      <p class="hero__subtitle">{{ h.subtitle }}</p>
+      <div class="hero__ctas">
+        <a class="btn btn--primary btn--lg" href="{{ h.primary_cta.url | relative_url }}">{{ h.primary_cta.label }} {% include icon.html name="arrow-right" %}</a>
+        <a class="btn btn--ghost btn--lg" href="{{ h.secondary_cta.url | relative_url }}">{{ h.secondary_cta.label }}</a>
+      </div>
+      <ul class="hero__badges">
+        {%- for b in h.badges %}<li>{% include icon.html name="check" %}{{ b }}</li>{% endfor %}
+      </ul>
+    </div>
+
+    <div class="terminal" data-terminal aria-label="Example agent run">
+      <div class="terminal__bar">
+        <span class="terminal__dots"><i></i><i></i><i></i></span>
+        <span class="terminal__title">{{ h.terminal.title }}</span>
+        <span class="terminal__live"><span class="dot"></span>live</span>
+      </div>
+      <ol class="terminal__body">
+        {%- for l in h.terminal.lines %}
+        <li class="tl tl--{{ l.kind }}">
+          {%- case l.kind -%}
+            {%- when "cmd" -%}<span class="tl__tag">$</span>
+            {%- when "user" -%}<span class="tl__tag">user</span>
+            {%- when "tool" -%}<span class="tl__tag">tool</span>
+            {%- when "think" -%}<span class="tl__tag">think</span>
+            {%- when "ok" -%}<span class="tl__tag">✓</span>
+          {%- endcase -%}
+          <span class="tl__text">{% if l.kind == "user" %}“{{ l.text }}”{% else %}{{ l.text }}{% endif %}</span>
+          {%- if l.meta %}<span class="tl__meta">{{ l.meta }}</span>{% endif -%}
+        </li>
+        {%- endfor %}
+      </ol>
+    </div>
+  </div>
+</section>
+
+<div class="marquee" aria-label="Technologies we work with">
+  <div class="marquee__track">
+    {%- for i in (1..2) %}
+    <ul class="marquee__list"{% if i == 2 %} aria-hidden="true"{% endif %}>
+      {%- for s in site.data.company.stack %}<li>{{ s }}</li>{% endfor %}
+    </ul>
+    {%- endfor %}
+  </div>
+</div>

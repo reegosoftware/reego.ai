@@ -1,0 +1,13 @@
+# "How we work" steps on the home page.
+- step: "01"
+  title: Discover
+  text: A short call and a written brief. We map the problem, the data and what "done" looks like.
+- step: "02"
+  title: Prototype
+  text: A working slice in days — real data, real model calls — so decisions are based on evidence.
+- step: "03"
+  title: Build
+  text: Production engineering with evals, monitoring and weekly demos. Your repos, your cloud.
+- step: "04"
+  title: Ship & hand over
+  text: Deploy, document and train your team. Optional ongoing support or a fractional retainer.

@@ -1,0 +1,5 @@
+# Labels for project `kind` values.
+product:     { label: Product,     color: teal }
+open-source: { label: Open source, color: yellow }
+client:      { label: Client work, color: red }
+tool:        { label: Free tool,   color: teal }

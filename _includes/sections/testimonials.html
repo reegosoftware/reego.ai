@@ -1,0 +1,23 @@
+{%- assign t = site.data.testimonials -%}
+<section class="section" id="testimonials">
+  <div class="container">
+    {% include section-head.html eyebrow="Kind words" title="Trusted by data and engineering teams." center=true %}
+    <div class="quotes">
+      {%- for q in t.quotes %}
+      <figure class="card quote" data-reveal>
+        <blockquote>{{ q.quote }}</blockquote>
+        <figcaption>
+          <span class="avatar" aria-hidden="true">{{ q.name | slice: 0 }}</span>
+          <span><strong>{{ q.name }}</strong><br><span class="muted">{{ q.role }}, {{ q.company }}</span></span>
+        </figcaption>
+      </figure>
+      {%- endfor %}
+    </div>
+    {%- if t.clients %}
+    <ul class="clients" data-reveal>
+      <li class="clients__label">Worked with</li>
+      {%- for c in t.clients %}<li><a href="{{ c.url }}" target="_blank" rel="noopener">{{ c.name }}</a></li>{% endfor %}
+    </ul>
+    {%- endif %}
+  </div>
+</section>

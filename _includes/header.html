@@ -1,0 +1,26 @@
+{%- assign c = site.data.company -%}
+<header class="site-header" data-header>
+  <div class="container site-header__inner">
+    <a class="site-header__brand" href="{{ '/' | relative_url }}">{% include logo.html %}</a>
+
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <ul class="nav__list">
+        {%- for item in c.nav %}
+        {%- assign active = false -%}
+        {%- if item.url != "/" and page.url contains item.url -%}{%- assign active = true -%}{%- endif %}
+        <li><a class="nav__link{% if active %} is-active{% endif %}" href="{{ item.url | relative_url }}">{{ item.label }}</a></li>
+        {%- endfor %}
+      </ul>
+      <a class="btn btn--primary btn--sm nav__cta" href="{{ '/#contact' | relative_url }}">Let's talk {% include icon.html name="arrow-right" %}</a>
+    </nav>
+
+    <div class="site-header__actions">
+      <button class="icon-btn" type="button" data-theme-toggle aria-label="Toggle colour theme">
+        {% include icon.html name="sun" class="icon--sun" %}{% include icon.html name="moon" class="icon--moon" %}
+      </button>
+      <button class="icon-btn nav-toggle" type="button" data-nav-toggle aria-controls="site-nav" aria-expanded="false" aria-label="Open menu">
+        {% include icon.html name="menu" class="icon--open" %}{% include icon.html name="close" class="icon--close" %}
+      </button>
+    </div>
+  </div>
+</header>

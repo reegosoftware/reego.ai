@@ -1,0 +1,28 @@
+- q: How fast can you build an MVP?
+  a: >-
+    Most AI MVPs reach a deployed, demo-ready state in 3–6 weeks. We start with
+    a working prototype in the first week so you can see real results early.
+- q: Which models and providers do you work with?
+  a: >-
+    OpenAI, Anthropic Claude, Google Gemini, Mistral and open-weight models
+    such as Llama — hosted or self-hosted. We pick per use case based on
+    quality, latency, cost and data-privacy requirements, and keep you
+    portable between providers.
+- q: Who owns the code and the IP?
+  a: >-
+    You do — 100%. We work in your repositories and cloud accounts whenever
+    possible, and every engagement ends with documentation and a handover.
+- q: Can you work alongside our existing engineering team?
+  a: >-
+    Yes, that's most of our work. We join your stand-ups, tickets and code
+    reviews, and leave your team able to own and extend what we built.
+- q: How do you price engagements?
+  a: >-
+    Fixed-price for well-scoped builds and discovery sprints, monthly retainers
+    for fractional work, and time-and-materials with a cap where scope is still
+    moving. You always get an estimate before we start.
+- q: What about data privacy and security?
+  a: >-
+    We sign NDAs and DPAs, use zero-data-retention endpoints or self-hosted
+    models where needed, and never train on your data. Security reviews and
+    eval suites are part of every production AI system we ship.

@@ -1,0 +1,18 @@
+{%- if site.posts.size > 0 -%}
+<section class="section" id="blog">
+  <div class="container">
+    <div class="section-head section-head--split" data-reveal>
+      <div>
+        <p class="eyebrow">From the blog</p>
+        <h2 class="section-title">Notes from building AI systems.</h2>
+      </div>
+      <a class="btn btn--ghost" href="{{ '/blog/' | relative_url }}">All posts {% include icon.html name="arrow-right" %}</a>
+    </div>
+    <div class="posts">
+      {%- for post in site.posts limit: 3 %}
+      {% include post-card.html post=post %}
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+{%- endif -%}

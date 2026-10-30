@@ -1,0 +1,13 @@
+<section class="section section--alt" id="faq">
+  <div class="container faq">
+    {% include section-head.html eyebrow="FAQ" title="Straight answers." intro="Anything else? Just ask — we reply within a business day." %}
+    <div class="faq__list">
+      {%- for f in site.data.faq %}
+      <details class="faq__item" data-reveal>
+        <summary>{{ f.q }}<span class="faq__icon">{% include icon.html name="plus" %}</span></summary>
+        <p>{{ f.a }}</p>
+      </details>
+      {%- endfor %}
+    </div>
+  </div>
+</section>

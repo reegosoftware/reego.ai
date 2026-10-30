@@ -1,0 +1,21 @@
+# Client quotes. Add or remove entries freely.
+quotes:
+  - quote: >-
+      I wanted to thank you for your excellent work here. You made a real
+      difference, and the team valued your contributions — especially FastData,
+      the Monitor Pro initiative for Hex cost reduction, and the Slack
+      notification apps. We also appreciated your commitment to a smooth handover.
+    name: Chenxi Li
+    role: Head of Data Science
+    company: Aircall
+  - quote: >-
+      You have had a huge impact at Aircall. Thank you for your contributions —
+      I would be glad to have you on my team again for our AI initiatives.
+    name: Sugandha Arora
+    role: Head of Data Engineering
+    company: Aircall
+
+# Companies shown in the "Worked with" row
+clients:
+  - { name: Aircall, url: "https://aircall.io" }
+  - { name: Turing,  url: "https://turing.com" }

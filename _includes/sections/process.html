@@ -1,0 +1,14 @@
+<section class="section section--alt" id="process">
+  <div class="container">
+    {% include section-head.html eyebrow="How we work" title="Evidence first. Then production." intro="Short feedback loops, working software every week, and no surprises at handover." center=true %}
+    <ol class="process">
+      {%- for s in site.data.process %}
+      <li class="process__step" data-reveal>
+        <span class="process__num">{{ s.step }}</span>
+        <h3 class="process__title">{{ s.title }}</h3>
+        <p>{{ s.text }}</p>
+      </li>
+      {%- endfor %}
+    </ol>
+  </div>
+</section>

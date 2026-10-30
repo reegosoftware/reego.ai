@@ -1,0 +1,94 @@
+# ---------------------------------------------------------------------------
+# "What we build" grid on the home page.
+# icon: one of the names in _includes/icon.html
+# ---------------------------------------------------------------------------
+- title: AI Agent Development
+  icon: agent
+  featured: true
+  summary: >-
+    Tool-using agents that plan, call your APIs and finish real work — with
+    guardrails, evals and observability baked in.
+  points:
+    - Tool / function calling & MCP servers
+    - Multi-agent orchestration
+    - Human-in-the-loop approvals
+    - Evals, tracing & cost control
+
+- title: AI Automation
+  icon: bolt
+  featured: true
+  summary: >-
+    Replace repetitive back-office work with LLM-powered workflows that plug
+    into Slack, your CRM, email and data warehouse.
+  points:
+    - Slack & Teams AI assistants
+    - Document & email processing
+    - Structured data extraction
+    - Scheduled & event-driven pipelines
+
+- title: MVP Development
+  icon: rocket
+  featured: true
+  summary: >-
+    From idea to a deployed, demo-ready product in weeks — web app, backend,
+    AI core, auth, payments and analytics.
+  points:
+    - Scoping & product shaping
+    - Full-stack build (React/Next.js, Node, Python)
+    - Deployed on Vercel, AWS or GCP
+    - Investor- and user-ready demos
+
+- title: LLM Apps & RAG
+  icon: chat
+  summary: >-
+    Copilots, chat assistants and search over your own knowledge — grounded,
+    cited and measurable.
+  points:
+    - Retrieval & vector search
+    - Prompt & context design
+    - Structured outputs
+    - Latency & cost tuning
+
+- title: Machine Learning Engineering
+  icon: cpu
+  summary: >-
+    Models taken from notebook to production service — trained, served,
+    monitored and retrained.
+  points:
+    - Classical ML & deep learning
+    - Fine-tuning open models
+    - Model serving & APIs
+    - Monitoring & drift detection
+
+- title: Data Science & Analytics
+  icon: chart
+  summary: >-
+    Turn raw data into decisions: analysis, forecasting, experiments and
+    natural-language self-service analytics.
+  points:
+    - Forecasting & segmentation
+    - Experiment design & A/B tests
+    - Dashboards & KPIs
+    - Text-to-SQL self-service
+
+- title: Data Engineering
+  icon: database
+  summary: >-
+    Reliable pipelines and warehouses that your models, dashboards and agents
+    can trust.
+  points:
+    - ELT with dbt & Airflow
+    - BigQuery / Redshift / Postgres
+    - Data quality checks
+    - Cost optimisation
+
+- title: AI Security & Evaluation
+  icon: shield
+  summary: >-
+    Eval suites, prompt-injection testing, guardrails and supply-chain
+    scanning for AI-powered systems.
+  points:
+    - LLM eval harnesses
+    - Prompt-injection & jailbreak tests
+    - Guardrails & policies
+    - Malware & dependency scanning

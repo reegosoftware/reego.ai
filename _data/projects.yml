@@ -1,0 +1,168 @@
+# ---------------------------------------------------------------------------
+# Products, open-source packages and client work.
+# Shown on /work/ (all) and on the home page (featured: true).
+#
+# Fields
+#   name         display name                                   (required)
+#   kind         product | open-source | client | tool           (required)
+#   tagline      one-liner                                        (required)
+#   description  2–3 sentences
+#   tags         list of short tags, used by the filter on /work/
+#   registry     pypi | npm (shows a registry badge)
+#   install      shell command with a copy button
+#   image        path to a screenshot, e.g. /assets/img/work/foo.jpg
+#   metric       highlighted result, e.g. "$80K/yr saved"
+#   featured     true → also shown on the home page
+#   links        list of { label, url }
+#
+# To add a project: copy a block, edit it, commit. That's it.
+# ---------------------------------------------------------------------------
+
+- name: ToolCalling.ai
+  kind: product
+  featured: true
+  tagline: The function-calling playground for LLMs
+  description: >-
+    A developer playground for LLM tool / function calling. Design tool
+    schemas and test them against OpenAI-compatible, Llama-compatible and
+    Anthropic models with your own API key.
+  tags: [Agents, Tool calling, LLM]
+  links:
+    - { label: toolcalling.ai, url: "https://toolcalling.ai" }
+
+- name: FastData
+  kind: open-source
+  featured: true
+  registry: npm
+  install: npx fastdata
+  tagline: Ask your database questions in plain language
+  description: >-
+    Data self-service for everyone. A Claude agent reads your knowledge base,
+    writes read-only SQL, runs it through your own connector (Postgres, MySQL,
+    SQLite or any MCP SQL server) and answers in Markdown. Born from a
+    text-to-SQL agent we built for a data team.
+  tags: [Agents, Data, Text-to-SQL, MCP]
+  links:
+    - { label: Docs,   url: "https://fastdata-docs.vercel.app/" }
+    - { label: npm,    url: "https://www.npmjs.com/package/fastdata" }
+    - { label: GitHub, url: "https://github.com/yilmazhasan/fastdata" }
+
+- name: DevGuard Scanner
+  kind: open-source
+  featured: true
+  registry: pypi
+  install: pipx install devguard-scanner
+  tagline: Scan untrusted repos for malware before you open them
+  description: >-
+    Fake interview tasks, poisoned forks and hijacked packages run code the
+    moment you open the folder. DevGuard finds those triggers — VS Code tasks,
+    install scripts, git and AI-assistant hooks — follows them to the code they
+    run, and gives a verdict. It never executes anything.
+  tags: [Security, Python, CLI]
+  links:
+    - { label: PyPI,   url: "https://pypi.org/project/devguard-scanner/" }
+    - { label: GitHub, url: "https://github.com/yilmazhasan/devguard-scanner" }
+
+- name: ToolAugmented.ai
+  kind: product
+  featured: true
+  tagline: The field guide to tool-augmented LLMs
+  description: >-
+    Best practices for training and evaluating LLMs on function calling:
+    schemas, system instructions, outputs, training data, multi-turn flows,
+    tool search and adversarial user cases.
+  tags: [Tool calling, LLM, Fine-tuning]
+  links:
+    - { label: toolaugmented.ai, url: "https://toolaugmented.ai" }
+
+- name: AI Slack agents
+  kind: client
+  featured: true
+  client: Aircall
+  metric: "~$80K / year saved"
+  tagline: AI Slack apps that replaced costly BI tooling
+  description: >-
+    For Aircall's data team we built AI-powered Slack applications and
+    notification flows so teams could query and act on customer data in near
+    real time — one of them cut internal BI tooling spend by roughly $80K a year.
+  tags: [Agents, Automation, Slack, Data]
+
+- name: Global sales & customer insights
+  kind: client
+  client: Aircall
+  image: /assets/img/work/global-sales-and-customer-insights.jpg
+  tagline: Self-service sales and customer analytics
+  description: >-
+    A data product giving revenue and customer teams a single view of global
+    sales and customer health, backed by modelled warehouse data.
+  tags: [Data, Analytics, Web]
+
+- name: Monitor Pro subscriptions
+  kind: client
+  client: Aircall
+  image: /assets/img/work/monitor-pro-subscription.jpg
+  tagline: Subscription monitoring & BI cost reduction
+  description: >-
+    Subscription and usage monitoring that helped the data team reduce
+    spend on third-party BI tooling.
+  tags: [Data, Analytics, Web]
+
+- name: prollm
+  kind: open-source
+  featured: true
+  registry: npm
+  install: npm i -g prollm
+  tagline: Prompt any OpenAI-compatible model from your terminal
+  description: >-
+    A tiny CLI to prompt OpenAI-compatible models (OpenAI, Mistral, Claude and
+    more) from the terminal, with named profiles for keys, models and endpoints.
+  tags: [LLM, CLI, Node.js]
+  links:
+    - { label: npm, url: "https://www.npmjs.com/package/prollm" }
+
+- name: prompt_llm
+  kind: open-source
+  registry: pypi
+  install: pip install prompt-llm
+  tagline: Zero-dependency LLM prompting CLI for Python
+  description: >-
+    A zero-dependency command-line tool to prompt LLMs — handy in scripts,
+    cron jobs and anywhere you don't want an SDK.
+  tags: [LLM, CLI, Python]
+  links:
+    - { label: PyPI,   url: "https://pypi.org/project/prompt-llm/" }
+    - { label: GitHub, url: "https://github.com/reego-software/prompt_llm" }
+
+- name: JSON Schema generator
+  kind: tool
+  tagline: Generate function-calling schemas in seconds
+  description: >-
+    A browser tool for generating JSON Schemas for LLM function / tool
+    definitions.
+  tags: [Tool calling, Web]
+  links:
+    - { label: Open app, url: "https://rs-cx.github.io/json-schema-generator-app" }
+
+- name: JSON Schema validator
+  kind: tool
+  tagline: Validate tool-call arguments against their schema
+  description: >-
+    A browser tool for validating LLM function-call payloads against a JSON
+    Schema — useful when debugging tool calling.
+  tags: [Tool calling, Web]
+  links:
+    - { label: Open app, url: "https://rs-cx.github.io/json-schema-validator-app" }
+
+- name: custom-permutation & custom-combination
+  kind: open-source
+  registry: npm
+  install: npm i custom-permutation
+  tagline: Permutations & combinations with custom rules
+  description: >-
+    Small, dependency-free libraries for generating permutations and
+    combinations with custom constraints — for JavaScript and Python.
+  tags: [Library, Node.js, Python]
+  links:
+    - { label: npm,         url: "https://www.npmjs.com/package/custom-permutation" }
+    - { label: PyPI (perm), url: "https://pypi.org/project/custom-permutation/" }
+    - { label: PyPI (comb), url: "https://pypi.org/project/custom-combination/" }

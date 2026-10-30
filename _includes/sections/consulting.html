@@ -1,0 +1,28 @@
+{%- assign c = site.data.consulting -%}
+<section class="section section--alt" id="consulting">
+  <div class="container">
+    {% include section-head.html eyebrow="Consulting" title=c.title intro=c.intro %}
+    <div class="topics">
+      {%- for t in c.topics %}
+      <article class="topic" data-reveal>
+        <div class="topic__icon">{% include icon.html name=t.icon %}</div>
+        <div>
+          <h3 class="topic__title">{{ t.title }}</h3>
+          <p>{{ t.text }}</p>
+        </div>
+      </article>
+      {%- endfor %}
+    </div>
+    <div class="formats">
+      {%- for f in c.formats %}
+      <article class="card format{% if f.highlight %} format--highlight{% endif %}" data-reveal>
+        {%- if f.highlight %}<span class="format__flag">Most popular</span>{% endif %}
+        <p class="format__duration">{{ f.duration }}</p>
+        <h3 class="format__name">{{ f.name }}</h3>
+        <p class="format__text">{{ f.text }}</p>
+        <a class="btn {% if f.highlight %}btn--primary{% else %}btn--ghost{% endif %} btn--block" href="{{ '/#contact' | relative_url }}" data-topic="{{ f.name }}">Book {{ f.name | downcase }}</a>
+      </article>
+      {%- endfor %}
+    </div>
+  </div>
+</section>

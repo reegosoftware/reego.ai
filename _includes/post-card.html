@@ -1,0 +1,22 @@
+{%- assign post = include.post -%}
+{%- assign words = post.content | number_of_words -%}
+{%- assign mins = words | divided_by: 220 | plus: 1 -%}
+{%- assign href = post.external_url | default: post.url -%}
+<article class="card post-card" data-filter-item data-tags="{{ post.tags | join: '|' | downcase }}" data-reveal>
+  <a class="post-card__link" href="{% if post.external_url %}{{ href }}{% else %}{{ href | relative_url }}{% endif %}"{% if post.external_url %} target="_blank" rel="noopener"{% endif %}>
+    <div class="post-card__meta">
+      <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
+      <span aria-hidden="true">·</span>
+      {%- if post.external_url %}
+      <span>{{ post.source | default: "External" }} {% include icon.html name="arrow-up-right" %}</span>
+      {%- else %}
+      <span>{{ mins }} min read</span>
+      {%- endif %}
+    </div>
+    <h3 class="post-card__title">{{ post.title }}</h3>
+    <p class="post-card__excerpt">{{ post.description | default: post.excerpt | strip_html | truncate: 170 }}</p>
+    {%- if post.tags.size > 0 %}
+    <ul class="tags">{% for t in post.tags limit: 3 %}<li>{{ t }}</li>{% endfor %}</ul>
+    {%- endif %}
+  </a>
+</article>

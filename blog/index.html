@@ -1,0 +1,28 @@
+---
+title: Blog
+eyebrow: Blog
+heading: Notes from building AI systems.
+description: >-
+  Practical writing on AI agents, tool calling, context engineering, data
+  self-service and shipping LLM products.
+---
+{%- assign tags = "" | split: "" -%}
+{%- for p in site.posts -%}{%- assign tags = tags | concat: p.tags -%}{%- endfor -%}
+{%- assign tags = tags | uniq | sort_natural -%}
+<section class="section section--flush-top">
+  <div class="container">
+    <div class="filters" role="toolbar" aria-label="Filter posts" data-filter-group>
+      <button class="chip is-active" type="button" data-filter="all">All</button>
+      {%- for t in tags %}
+      <button class="chip chip--quiet" type="button" data-filter="{{ t | downcase }}">{{ t }}</button>
+      {%- endfor %}
+      <a class="chip chip--quiet filters__rss" href="{{ '/blog/feed.xml' | relative_url }}">{% include icon.html name="rss" %}RSS</a>
+    </div>
+    <div class="posts posts--all">
+      {%- for post in site.posts %}
+      {% include post-card.html post=post %}
+      {%- endfor %}
+    </div>
+    <p class="empty" data-filter-empty hidden>No posts with that tag yet.</p>
+  </div>
+</section>

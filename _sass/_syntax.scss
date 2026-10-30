@@ -1,0 +1,14 @@
+/* Rouge syntax theme — tuned to the brand palette, always on a dark code surface */
+.highlight {
+  .c, .c1, .cm, .cs, .cp, .ch, .cd { color: #6f7587; font-style: italic; }
+  .k, .kd, .kn, .kp, .kr, .kt, .kc { color: #ff6b7a; }
+  .o, .ow { color: #c8cdd9; }
+  .s, .s1, .s2, .sb, .sc, .sd, .se, .sh, .si, .sx, .sr, .ss { color: #fdd04d; }
+  .na, .nt, .py { color: #2ec7d6; }
+  .nf, .fm, .nc, .nn { color: #7ee0e9; }
+  .nb, .bp, .nv, .vi, .vg { color: #f2a7b0; }
+  .m, .mi, .mf, .mh, .mo, .il { color: #c39bff; }
+  .p { color: #9aa1b2; }
+  .err { color: #ff6b7a; }
+  .gd { color: #ff6b7a; } .gi { color: #2ec7d6; }
+}

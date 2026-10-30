@@ -1,0 +1,25 @@
+{%- assign a = site.data.company.about -%}
+<section class="section section--alt" id="about">
+  <div class="container about">
+    <div class="about__copy" data-reveal>
+      <p class="eyebrow">About Reego</p>
+      <h2 class="section-title">{{ a.title }}</h2>
+      <p class="section-intro">{{ a.body }}</p>
+      <ul class="principles">
+        {%- for p in a.principles %}
+        <li><strong>{{ p.title }}</strong><span>{{ p.text }}</span></li>
+        {%- endfor %}
+      </ul>
+    </div>
+    <aside class="card founder" data-reveal>
+      <div class="founder__avatar" aria-hidden="true">{{ a.founder.initials }}</div>
+      <h3 class="founder__name">{{ a.founder.name }}</h3>
+      <p class="founder__role">{{ a.founder.role }}</p>
+      <ul class="socials">
+        {%- for l in a.founder.links %}
+        <li><a class="icon-btn" href="{{ l.url }}" target="_blank" rel="noopener" aria-label="{{ l.name }}">{% include icon.html name=l.icon %}</a></li>
+        {%- endfor %}
+      </ul>
+    </aside>
+  </div>
+</section>

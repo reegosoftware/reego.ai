@@ -1,0 +1,42 @@
+{%- assign c = site.data.company.contact -%}
+<section class="section" id="contact">
+  <div class="container">
+    <div class="contact card">
+      <div class="contact__glow" aria-hidden="true"></div>
+      <div class="contact__copy">
+        <p class="eyebrow">Start a project</p>
+        <h2 class="section-title">Have an idea, a messy workflow or a stuck prototype?</h2>
+        <p class="section-intro">Tell us what you're building and what "done" looks like. {{ c.response_time }}</p>
+        <ul class="contact__channels">
+          <li><a href="mailto:{{ c.email }}">{% include icon.html name="mail" %}<span><strong>Email</strong>{{ c.email }}</span></a></li>
+          {%- if c.whatsapp != "" %}
+          <li><a href="https://wa.me/{{ c.whatsapp }}" target="_blank" rel="noopener">{% include icon.html name="whatsapp" %}<span><strong>WhatsApp</strong>Fast back-and-forth</span></a></li>
+          {%- endif %}
+          {%- if c.calendar != "" %}
+          <li><a href="{{ c.calendar }}" target="_blank" rel="noopener">{% include icon.html name="calendar" %}<span><strong>Book a call</strong>30-minute intro</span></a></li>
+          {%- endif %}
+        </ul>
+      </div>
+
+      <form class="contact__form" {% if c.form_endpoint != "" %}action="{{ c.form_endpoint }}" method="POST"{% else %}data-mailto="{{ c.email }}"{% endif %}>
+        <div class="field-row">
+          <label class="field"><span>Name</span><input name="name" autocomplete="name" required></label>
+          <label class="field"><span>Email</span><input name="email" type="email" autocomplete="email" required></label>
+        </div>
+        <label class="field"><span>Company <em>(optional)</em></span><input name="company" autocomplete="organization"></label>
+        <fieldset class="field">
+          <legend>I'm interested in</legend>
+          <div class="chips">
+            {%- assign interests = "AI agent,Automation,MVP,ML / Data,Consulting,Something else" | split: "," -%}
+            {%- for i in interests %}
+            <label class="chip"><input type="checkbox" name="interest" value="{{ i }}"><span>{{ i }}</span></label>
+            {%- endfor %}
+          </div>
+        </fieldset>
+        <label class="field"><span>Tell us about it</span><textarea name="message" rows="4" required placeholder="What are you building? Timeline, stack, what success looks like…"></textarea></label>
+        <button class="btn btn--primary btn--lg btn--block" type="submit">Send message {% include icon.html name="arrow-right" %}</button>
+        <p class="form-note" data-form-note>{% if c.form_endpoint == "" %}Opens your email app with the message pre-filled.{% endif %}</p>
+      </form>
+    </div>
+  </div>
+</section>

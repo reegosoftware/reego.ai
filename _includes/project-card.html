@@ -1,0 +1,36 @@
+{%- assign p = include.project -%}
+{%- assign k = site.data.kinds[p.kind] -%}
+<article class="card project{% if p.image %} project--media{% endif %}" data-filter-item data-tags="{{ p.kind }}|{{ p.tags | join: '|' | downcase }}" data-reveal>
+  {%- if p.image %}
+  <div class="project__media"><img src="{{ p.image | relative_url }}" alt="{{ p.name }} screenshot" loading="lazy" decoding="async"></div>
+  {%- endif %}
+  <div class="project__body">
+    <div class="project__meta">
+      <span class="pill pill--{{ k.color | default: 'teal' }}">{{ k.label | default: p.kind }}</span>
+      {%- if p.registry %}<span class="pill pill--ghost">{% include icon.html name="package" %}{{ p.registry }}</span>{% endif %}
+      {%- if p.client %}<span class="project__client">for {{ p.client }}</span>{% endif %}
+    </div>
+    <h3 class="project__title">{{ p.name }}</h3>
+    <p class="project__tagline">{{ p.tagline }}</p>
+    {%- if p.metric %}<p class="project__metric">{% include icon.html name="sparkle" %}{{ p.metric }}</p>{% endif %}
+    {%- if p.description %}<p class="project__desc">{{ p.description }}</p>{% endif %}
+    {%- if p.install %}
+    <div class="install">
+      <code><span class="install__prompt">$</span> {{ p.install }}</code>
+      <button class="install__copy" type="button" data-copy="{{ p.install }}" aria-label="Copy install command">{% include icon.html name="copy" class="icon--copy" %}{% include icon.html name="check" class="icon--done" %}</button>
+    </div>
+    {%- endif %}
+    <div class="project__foot">
+      {%- if p.tags %}
+      <ul class="tags">{% for t in p.tags limit: 3 %}<li>{{ t }}</li>{% endfor %}</ul>
+      {%- endif %}
+      {%- if p.links %}
+      <div class="project__links">
+        {%- for l in p.links %}
+        <a href="{{ l.url }}" target="_blank" rel="noopener">{{ l.label }}{% include icon.html name="arrow-up-right" %}</a>
+        {%- endfor %}
+      </div>
+      {%- endif %}
+    </div>
+  </div>
+</article>

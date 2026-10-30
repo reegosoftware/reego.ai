@@ -1,0 +1,10 @@
+# Blog authors. Reference with `author: <key>` in a post's front matter.
+hasan:
+  name: Hasan Yılmaz
+  role: Founder, Reego
+  initials: HY
+  url: https://hasanyilmaz.me
+team:
+  name: Reego Team
+  role: AI engineering studio
+  initials: R

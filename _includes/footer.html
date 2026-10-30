@@ -1,0 +1,47 @@
+{%- assign c = site.data.company -%}
+<footer class="site-footer">
+  <div class="container">
+    <div class="site-footer__grid">
+      <div class="site-footer__brand">
+        <a href="{{ '/' | relative_url }}">{% include logo.html %}</a>
+        <p>{{ site.description }}</p>
+        <ul class="socials">
+          {%- for s in c.social %}
+          <li><a class="icon-btn" href="{{ s.url }}" target="_blank" rel="noopener" aria-label="{{ s.name }}">{% include icon.html name=s.icon %}</a></li>
+          {%- endfor %}
+          <li><a class="icon-btn" href="{{ '/blog/feed.xml' | relative_url }}" aria-label="RSS feed">{% include icon.html name="rss" %}</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="site-footer__title">Build</h3>
+        <ul class="site-footer__links">
+          {%- for s in site.data.services limit: 6 %}
+          <li><a href="{{ '/#services' | relative_url }}">{{ s.title }}</a></li>
+          {%- endfor %}
+        </ul>
+      </div>
+      <div>
+        <h3 class="site-footer__title">Consulting</h3>
+        <ul class="site-footer__links">
+          {%- for t in site.data.consulting.topics limit: 6 %}
+          <li><a href="{{ '/#consulting' | relative_url }}">{{ t.title }}</a></li>
+          {%- endfor %}
+        </ul>
+      </div>
+      <div>
+        <h3 class="site-footer__title">Company</h3>
+        <ul class="site-footer__links">
+          <li><a href="{{ '/work/' | relative_url }}">Work &amp; products</a></li>
+          <li><a href="{{ '/blog/' | relative_url }}">Blog</a></li>
+          <li><a href="{{ '/#about' | relative_url }}">About</a></li>
+          <li><a href="{{ '/#faq' | relative_url }}">FAQ</a></li>
+          <li><a href="mailto:{{ c.contact.email }}">{{ c.contact.email }}</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="site-footer__bottom">
+      <span>© {{ site.time | date: "%Y" }} {{ c.legal_name }}. All rights reserved.</span>
+      <span>{{ c.location }}</span>
+    </div>
+  </div>
+</footer>

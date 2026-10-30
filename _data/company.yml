@@ -1,0 +1,108 @@
+# ---------------------------------------------------------------------------
+# Company info, hero, contact & socials.
+# Leave a value empty ("") to hide it on the site.
+# ---------------------------------------------------------------------------
+name: Reego
+legal_name: Reego Software
+domain: reego.ai
+location: Kadıköy, Istanbul · working remotely worldwide
+
+contact:
+  email: reego.software@gmail.com
+  whatsapp: "905556907419"            # digits only, with country code
+  calendar: ""                        # e.g. https://cal.com/reego/intro → shows a "Book a call" button
+  form_endpoint: ""                   # e.g. https://formspree.io/f/xxxxxx → shows a contact form
+  response_time: We usually reply within one business day.
+
+social:
+  - { name: GitHub,   icon: github,   url: "https://github.com/reego-software" }
+  - { name: LinkedIn, icon: linkedin, url: "https://www.linkedin.com/company/reego-software" }
+  - { name: X,        icon: x,        url: "https://x.com/ReegoSoftware" }
+
+nav:
+  - { label: Services,   url: "/#services" }
+  - { label: Consulting, url: "/#consulting" }
+  - { label: Work,       url: "/work/" }
+  - { label: Blog,       url: "/blog/" }
+  - { label: About,      url: "/#about" }
+
+hero:
+  eyebrow: AI engineering studio
+  title_before: "We build AI that"
+  title_highlight: "actually ships."
+  subtitle: >-
+    Agents, automations, ML systems and MVPs — designed, engineered and
+    deployed by a team that builds AI developer tooling for a living.
+  primary_cta:   { label: Start a project, url: "/#contact" }
+  secondary_cta: { label: See our work,    url: "/work/" }
+  badges:
+    - Agents & tool calling
+    - Context engineering
+    - From idea to production
+
+  # The animated "agent run" in the hero. kind: cmd | user | tool | think | ok
+  terminal:
+    title: reego · agent run
+    lines:
+      - { kind: cmd,   text: "reego run revenue-agent" }
+      - { kind: user,  text: "Which accounts churned last week, and why?" }
+      - { kind: think, text: "planning · 3 tools available" }
+      - { kind: tool,  text: "sql.query(\"churned_accounts\", days=7)",   meta: "42 rows · 180ms" }
+      - { kind: tool,  text: "crm.notes(account_ids=[…42])",              meta: "ok · 410ms" }
+      - { kind: think, text: "clustering churn reasons…" }
+      - { kind: tool,  text: "slack.post(#revenue, report.md)",           meta: "sent" }
+      - { kind: ok,    text: "done in 6.2s · 3 tool calls · $0.011" }
+
+stats:
+  - { value: "~9 yrs",  label: building production software & data systems }
+  - { value: "$80K/yr", label: tooling spend saved with a single AI Slack agent }
+  - { value: "6+",      label: AI products & open-source packages shipped }
+  - { value: "100%",    label: of the code and IP is yours at handover }
+
+# Shown in the scrolling strip under the hero
+stack:
+  - OpenAI
+  - Anthropic Claude
+  - Gemini
+  - Llama
+  - Mistral
+  - MCP
+  - LangGraph
+  - Claude Agent SDK
+  - PyTorch
+  - scikit-learn
+  - Hugging Face
+  - pgvector
+  - FastAPI
+  - Node.js
+  - Next.js
+  - BigQuery
+  - Redshift
+  - dbt
+  - Airflow
+  - AWS
+  - Google Cloud
+  - Vercel
+
+about:
+  title: Senior engineers, not a slide deck.
+  body: >-
+    Reego is a small, senior studio founded by Hasan Yılmaz — a METU computer
+    engineer with ~9 years shipping production systems across .NET, Node.js,
+    Python, data platforms and LLM tooling. We've built AI Slack agents,
+    text-to-SQL self-service, data pipelines and developer tools used in the
+    wild. We work like an extension of your team: your repos, your tools,
+    clear milestones and a clean handover.
+  founder:
+    name: Hasan Yılmaz
+    role: Founder · AI & full-stack engineer
+    initials: HY
+    url: https://hasanyilmaz.me
+    links:
+      - { name: LinkedIn, icon: linkedin, url: "https://www.linkedin.com/in/ylmzhsn" }
+      - { name: GitHub,   icon: github,   url: "https://github.com/yilmazhasan" }
+      - { name: Website,  icon: globe,    url: "https://hasanyilmaz.me" }
+  principles:
+    - { title: Ship early, measure always, text: "Working software in days, with evals and metrics so we know it actually helps." }
+    - { title: Boring where it counts, text: "Proven infrastructure underneath, so the AI parts are the only interesting ones." }
+    - { title: You own everything, text: "Your repos, your cloud, your keys. Documentation and handover included." }
